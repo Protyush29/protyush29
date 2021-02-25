@@ -2,7 +2,6 @@ certifi==2020.12.5
 click==7.1.2
 fastapi==0.55.1
 Flask==1.1.2
-gencpp==0.6.0
 geneus==2.2.6
 genlisp==0.4.16
 genmsg==0.5.11
