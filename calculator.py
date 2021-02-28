@@ -12,8 +12,11 @@ def render_static():
 def calculator():
     if request.method == "POST":
         operation = json.loads(request.data)
-        print()
-        return json.dumps({'result': np.array2string(ne.evaluate(operation['data']))})
+        try:
+            data = np.array2string(ne.evaluate(operation['data']))
+        except:
+            data = ':-p trick questions!'
+        return json.dumps({'result': data})
 
 if __name__ == '__main__':
     app.run(debug=True)
