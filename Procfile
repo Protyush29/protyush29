@@ -1,2 +1,1 @@
-web: gunicorn
-app:calculator
+web: gunicorn app:calculator
