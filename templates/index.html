@@ -8,10 +8,10 @@
 
       <h1>Calculator Design Using HTML Layout</h1>
       <div class="container">
-      <div class="header">Calculator</div>
+      <div class="header" title="Just a simple calcultor :-)">Calculator</div>
       <input type="text" class="result" id="result">
       <div class="first-row">
-        <input type="button" name="" value="?" class="green white-text global" onclick="aboutCalc()">
+        <input type="button" name="" value="," class="global" onclick="charValue(',')">
         <input type="button" name="" value="C" class="green white-text global" onclick="clrLast()">
         <input type="button" name="" value="AC" class="green white-text global" onclick="clr()">
         <input type="button" name="" value="+" class="global" onclick="charValue('+')">
@@ -38,6 +38,7 @@
           <input type="button" name="" value="." class=" global" onclick="charValue('.')">
           <input type="button" name="" value="0" class=" global" onclick="charValue('0')">
           <input type="button" name="" value="=" class=" green white-text global" onclick="result()">
+          <input type="button" name="" value="M" class=" global" title="Provides mean of values entered. Usage :Enter 2,3,4,5 then press M " onclick="mean()">
 
 
       </div>

@@ -1,4 +1,5 @@
-console.log("entry to static js");
+var counter = 0;
+
  //function that display value
 function charValue(val)
 {
@@ -26,7 +27,7 @@ function result()
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify({"data" : document.getElementById("result").value}),
         success: function(response){
-            data = JSON.parse(response);
+           data = JSON.parse(response);
            document.getElementById("result").value = data['result'];
         },
         error: function(response){
@@ -35,9 +36,40 @@ function result()
     });
 }
 
-//function for communication
-function aboutCalc()
+//function for mean
+function mean()
 {
-    document.getElementById("result").value = "SUUP ?";
-    setTimeout(() => { document.getElementById("result").value = "lets Maths."; setTimeout(() => { document.getElementById("result").value = "Numbers please."; setTimeout(() => { document.getElementById("result").value = ""; }, 500);}, 500);}, 1000);
+    var value = document.getElementById("result").value;
+    if ( value === "")
+    {
+       document.getElementById("result").value = "Enter some value atleast!!";
+       setTimeout(() => { clr(); }, 500);
+    }
+    else
+    {
+        if (value.indexOf(',') > -1 && value.slice(-1) !== ",")
+        {
+
+            $.ajax(
+            {
+                    type : 'POST',
+                    url : "/mean",
+                    contentType: 'application/json;charset=UTF-8',
+                    data : JSON.stringify({"data" : document.getElementById("result").value}),
+                    success: function(response){
+                        data = JSON.parse(response);
+                        document.getElementById("result").value = data['result'];
+                    },
+                    error: function(response){
+                        document.getElementById("result").value = response;
+                    }
+            });
+        }
+        else
+        {
+            document.getElementById("result").value = "Just hover over M.";
+            setTimeout(() => { clr(); }, 500);
+        }
+    }
+
 }

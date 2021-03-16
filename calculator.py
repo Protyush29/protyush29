@@ -19,11 +19,20 @@ def calculator():
             data = ':-p trick questions!'
         return json.dumps({'result': data})
 
+@app.route('/mean', methods=['POST'])
+def mean():
+    if request.method == "POST":
+        operation = json.loads(request.data)
+        data = operation["data"].split(',')
+        data= [float(i) for i in data]
+        mean = sum(data)/len(data)
+        return json.dumps({'result': mean})
+
 def main():
     if not os.environ.get("WERKZEUG_RUN_MAIN"):
         webbrowser.open_new('http://127.0.0.1:2000/')
 
-    app.run(host="127.0.0.1", port=2000)
+    app.run(host="127.0.0.1", port=2000, debug=True)
 
 
 
