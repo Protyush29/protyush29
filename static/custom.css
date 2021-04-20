@@ -1,7 +1,15 @@
+body {
+  background: url("image.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 h1{
   text-align: center;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
+  color: #fff;
 }
 *{
   margin: 0;
@@ -11,27 +19,34 @@ h1{
   margin: auto;
   width: 25%;
   padding: 10px;
-  border: 1px solid #f2f2f2;
+
   -webkit-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
      -moz-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
           box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
   background-color: #fff;
-  height: 450px;
-  background-color: #F8F8F8;
+  height: 400px;
+  background: inherit;
 }
 .header{
-  background-color: #8DC9FE;
+  background-color: inherit;
   padding: 10px;
+  margin-bottom: 10px;
   color: #fff;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 .result{
   font-size: 24px;
   padding: 24px 5px;
+  margin-bottom: 7px;
   font-weight: 700;
   text-align: right;
   width: 100%;
   border: 1px solid #000;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
+     -moz-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
+          box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
   background-color: #F8F8F8;
   overflow-x: scroll;
 }
@@ -45,12 +60,16 @@ h1{
   width: 100%;
 }
 .global{
- padding: 15px;
+ padding: 17px;
+ margin-bottom: 5px;
  font-weight: bold;
  font-size: 16px;
  border: none;
  border-radius: 3px;
  background-color: #F2F2F2;
+ -webkit-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
+     -moz-box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
+          box-shadow: 1px 1px 4px 0px rgba(176,176,176,1);
  float: left;
  width: 23.5%;
  margin: 0 2px;
