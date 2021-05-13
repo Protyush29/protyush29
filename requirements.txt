@@ -8,7 +8,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 numexpr==2.7.2
-pydantic==1.5.1
+pydantic==1.6.2
 starlette==0.13.2
 uvicorn==0.11.5
 websockets==8.1
